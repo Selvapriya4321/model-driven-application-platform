@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f2f6fc; color: #17243b; }
+.page { max-width: 1100px; margin: 0 auto; padding: 28px 18px 50px; }
+header { background: #153e75; color: white; padding: 28px; border-radius: 16px; }
+header h1 { margin: 8px 0; }
+header p { line-height: 1.5; }
+.eyebrow { font-size: 12px; letter-spacing: 2px; font-weight: bold; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+.step { background: #dce9ff; border: 1px solid #b8cef2; padding: 15px; border-radius: 10px; font-weight: bold; text-align: center; }
+.panel { background: white; border: 1px solid #dce3ee; border-radius: 14px; padding: 22px; margin: 18px 0; box-shadow: 0 4px 14px #14294a0b; }
+h2 { margin-top: 0; }
+label { font-weight: 600; }
+input, select { font: inherit; border: 1px solid #bdc9d9; border-radius: 7px; padding: 10px; background: white; min-width: 0; }
+.model-label { display: grid; gap: 8px; max-width: 500px; }
+.field-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 24px; }
+.field-row { display: grid; grid-template-columns: 28px minmax(130px, 1fr) 130px 110px 90px; gap: 10px; align-items: center; margin: 10px 0; }
+.field-number { color: #65758b; }
+.required { display: flex; gap: 6px; align-items: center; font-size: 13px; }
+.required input { width: 16px; height: 16px; }
+button { background: #1766c2; color: white; border: 0; border-radius: 7px; padding: 11px 14px; font-weight: bold; cursor: pointer; }
+button:hover { filter: brightness(.93); }
+button.remove { background: #b83245; padding: 9px; }
+button.secondary { background: #52657e; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.message { background: #edf4ff; border-left: 4px solid #1766c2; padding: 12px; overflow-wrap: anywhere; }
+li { margin: 8px 0; }
+footer { color: #65758b; text-align: center; padding: 20px; font-size: 13px; }
+@media (max-width: 720px) {
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .field-row { grid-template-columns: 24px 1fr 1fr; }
+  .required { grid-column: 2; }
+  button.remove { grid-column: 3; }
+}
+@media (max-width: 430px) {
+  .steps { grid-template-columns: 1fr; }
+  .field-row { grid-template-columns: 24px 1fr; }
+  .field-row select, .required, button.remove { grid-column: 2; }
+}
